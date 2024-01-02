@@ -1,5 +1,6 @@
 const path = require("path");
 const webpack = require("webpack");
+require('dotenv').config();
 
 module.exports = {
   entry: "./src/index.js",
@@ -22,11 +23,6 @@ module.exports = {
     minimize: true,
   },
   plugins: [
-    new webpack.DefinePlugin({
-      "process.env": {
-        // This has effect on the react lib size
-        NODE_ENV: JSON.stringify("production"),
-      },
-    }),
+    new webpack.EnvironmentPlugin(['NODE_ENV', 'API'])
   ],
 };

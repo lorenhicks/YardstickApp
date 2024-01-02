@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'yardstickapp.apps.YardstickappConfig',
-    'rest_framework'
+    'rest_framework',
+    'yardsticklive.apps.YardstickliveConfig'
 ]
 
 MIDDLEWARE = [
